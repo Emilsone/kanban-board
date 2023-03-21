@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- component -->
-    <section class="task-section">
+    <section class="article-section">
       <div class="w-full p-8  flex justify-around ">
         <div class="rounded bg-grey-light w-64 p-2 card-bg">
           <div class="flex justify-between py-1">
@@ -13,11 +13,10 @@
             </svg>
           </div>
           <div class="text-sm mt-2">
-            <!-- <div class=""> -->
-            <draggable class="draggable-list" :list="tasks.newPitch" group="tasks">
-              <div v-for="(task, i) in tasks.newPitch" :key="i">
+            <draggable class="draggable-list" :list="articles.newPitch" group="articles">
+              <div v-for="(article, i) in articles.newPitch" :key="i">
                 <div class="bg-white p-2  py-6 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
-                  <p>{{ task }}</p>
+                  <p>{{ article }}</p>
                   <div class="text-grey-darker mt-2 ml-2 flex justify-between items-start">
                     <span class="text-xs flex items-center">
                       <svg class="h-4 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -26,11 +25,10 @@
                       </svg>
                       3/5
                     </span>
-                    <img src="https://i.imgur.com/OZaT7jl.png" class="rounded-full" />
+
                   </div>
                 </div>
               </div>
-
               <div class="flex justify-between align-middle items-center m-3">
                 <p class="mt-3 text-grey-dark flex justify-between"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
@@ -48,11 +46,8 @@
                 </span>
               </div>
             </draggable>
-            <!-- </div> -->
-
           </div>
         </div>
-
         <div class="rounded bg-grey-light w-64 p-2 card-bg">
           <div class="flex justify-between py-1">
             <h3 class="text-lg">Content in Progress</h3>
@@ -64,10 +59,10 @@
           </div>
           <div class="text-sm mt-2">
             <div class="">
-              <draggable class="draggable-list" :list="tasks.contentInProgress" group="tasks">
-                <div v-for="(task, i) in tasks.contentInProgress" :key="i">
+              <draggable class="draggable-list" :list="articles.contentInProgress" group="articles">
+                <div v-for="(article, i) in articles.contentInProgress" :key="i">
                   <div class="bg-white p-2  py-6 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
-                    <p>{{ task }}</p>
+                    <p>{{ article }}</p>
                     <div class="text-grey-darker mt-2 ml-2 flex justify-between items-start">
                       <span class="text-xs flex items-center">
                         <svg class="h-4 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -76,11 +71,10 @@
                         </svg>
                         3/5
                       </span>
-                      <img src="https://i.imgur.com/OZaT7jl.png" class="rounded-full" />
+
                     </div>
                   </div>
                 </div>
-
                 <div class="flex justify-between align-middle items-center m-3">
                   <p class="mt-3 text-grey-dark flex justify-between"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                       viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
@@ -102,7 +96,6 @@
 
           </div>
         </div>
-
         <div class="rounded bg-grey-light w-64 p-2  card-bg">
           <div class="flex justify-between py-1">
             <h3 class="text-lg">Draft Received</h3>
@@ -114,10 +107,10 @@
           </div>
           <div class="text-sm mt-2">
             <div class="">
-              <draggable class="draggable-list" :list="tasks.draftReceived" group="tasks">
-                <div v-for="(task, i) in tasks.draftReceived" :key="i">
+              <draggable class="draggable-list" :list="articles.draftReceived" group="articles">
+                <div v-for="(article, i) in articles.draftReceived" :key="i">
                   <div class="bg-white p-2  py-6 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
-                    <p>{{ task }}</p>
+                    <p>{{ article }}</p>
                     <div class="text-grey-darker mt-2 ml-2 flex justify-between items-start">
                       <span class="text-xs flex items-center">
                         <svg class="h-4 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -126,7 +119,7 @@
                         </svg>
                         3/5
                       </span>
-                      <img src="https://i.imgur.com/OZaT7jl.png" class="rounded-full" />
+
                     </div>
                   </div>
                 </div>
@@ -149,11 +142,8 @@
                 </div>
               </draggable>
             </div>
-
           </div>
-
         </div>
-
         <div class="rounded bg-grey-light w-64 p-2 card-bg">
           <div class="flex justify-between py-1">
             <h3 class="text-lg">In Review</h3>
@@ -165,10 +155,10 @@
           </div>
           <div class="text-sm mt-2">
             <div class="">
-              <draggable class="draggable-list" :list="tasks.inReview" group="tasks">
-                <div v-for="(task, i) in tasks.inReview" :key="i">
+              <draggable class="draggable-list" :list="articles.inReview" group="articles">
+                <div v-for="(article, i) in articles.inReview" :key="i">
                   <div class="bg-white p-2  py-6 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
-                    <p>{{ task }}</p>
+                    <p>{{ article }}</p>
                     <div class="text-grey-darker mt-2 ml-2 flex justify-between items-start">
                       <span class="text-xs flex items-center">
                         <svg class="h-4 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -177,7 +167,7 @@
                         </svg>
                         3/5
                       </span>
-                      <img src="https://i.imgur.com/OZaT7jl.png" class="rounded-full" />
+
                     </div>
                   </div>
                 </div>
@@ -217,10 +207,10 @@ export default {
   },
   data() {
     return {
-      tasks: {
+      articles: {
         newPitch: ["Introduction to Tailwind CSS", "Grapql and Vue: Consume API", "Frontend:React vs Vue"],
         contentInProgress: ["Vuex vs Pinia", "Svelte vs React"],
-        draftReceived: ["Implement Web3 Features", "Bump to vite.js"],
+        draftReceived: ["Getting started with Next.JS", "What is vite.js"],
         inReview: [""],
       },
     };
@@ -230,7 +220,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.task-section {
+.article-section {
   font-family: 'Work Sans', sans-serif;
   background-image: url(https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1663x1920/c429dd4ede333ffefe94abbb4d512691/photo-1613824320065-3d07b66b8d32.jpg);
   height: 100vh;
